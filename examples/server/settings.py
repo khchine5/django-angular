@@ -26,6 +26,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.admin',
     'django.contrib.staticfiles',
+    'sekizai',
     'djng',
     'server',
 )
@@ -67,6 +68,7 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'client', 'src'),
+    ('node_modules', os.path.join(BASE_DIR, 'examples/node_modules')),
 )
 
 TEMPLATES = [
@@ -84,6 +86,7 @@ TEMPLATES = [
                 'django.template.context_processors.tz',
                 'django.template.context_processors.request',
                 'django.contrib.messages.context_processors.messages',
+                'sekizai.context_processors.sekizai',
                 'server.context_processors.global_context',
             ],
         },
