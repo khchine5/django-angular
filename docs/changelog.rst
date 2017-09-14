@@ -4,6 +4,18 @@
 Release History
 ===============
 
+1.2
+---
+* To be compliant with other frameworks, Ajax responses from invalid form submissions, now shall
+  respond with a ``HttpResponseBadRequest`` (status code 422) rather than with a ``HttpResponse``
+  (status 200). This requires to adopt the form response views and the response handlers in the
+  JavaScript files, submitting the form data.
+
+1.1.3
+-----
+* Fix #309: When using Meta to create forms, ``djng.fields.ModelChoiceField`` isn't substituted for
+  Django's ``ModelChoiceField``.
+
 1.1.2
 -----
 * Rather than checking if a field in a form that uses the ``NgMixins`` is in ``djng.forms.fields``,
